@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6K2R39BSNN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6K2R39BSNN');
+</script>
   <head>
     <meta charset="utf-8">
-    <title>Sammy Student | Work hard, play hard</title>
+    <title>Lucy Xie | Work hard, play hard</title>
     <link rel="stylesheet" href="stylesheets/sammy-style.css">
   </head>
   <body>
     <header>
-      <p><a href="index.html">Sammy Student</a></p>
+      <p><a href="index.html">Lucy Xie</a></p>
       <nav>
         <ul>
           <li><a href="about.html">About</a></li>
@@ -29,25 +38,23 @@
     </div>
 
     <footer>
-      <p>&copy; 2021 Sammy Student |
+      <p>&copy; 2023 Lucy Xie |
         <a href="https://github.com/prof-rossetti/student-site">source code</a>
       </p>
     </footer>
 
     <script type="text/javascript">
 
-        //
-        // FYI: this is a website interactivity teaser...
-        //
-        //var resumeButton = document.getElementById("download-resume")
-        //
-        //function handleClick(event) {
-        //    console.log("YOU CLICKED ME!")
-        //    console.log(event.target)
-        //}
-        //
-        //resumeButton.addEventListener("click", handleClick, false)
-
-    </script>
+      var resumeButton = document.getElementById("download-resume")
+  
+      function handleClick() {
+          console.log("YOU CLICKED ME!")
+          // send event to GA
+          gtag("event", "resume_download")
+      }
+  
+      resumeButton.addEventListener("click", handleClick, false)
+  
+  </script>
   </body>
 </html>
